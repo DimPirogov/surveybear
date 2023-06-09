@@ -54,7 +54,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "surveybear-survey-spa:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/surveybear-survey-spa/proxy.conf.json"
       },
       "configurations": {
         "development": {

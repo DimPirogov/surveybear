@@ -17,6 +17,6 @@ describe('App', () => {
     
     const { getByText } = render(<BrowserRouter><App /></BrowserRouter>);
     
-    expect(getByText(/Welcome surveybear-survey-spa/gi)).toBeTruthy();
+    expect(getByText(/Du är på förstasidan/gi)).toBeTruthy();
   });
 });

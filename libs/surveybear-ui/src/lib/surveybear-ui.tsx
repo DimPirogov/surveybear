@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface SurveychimpUiProps {}
+export interface SurveyBearUiProps {}
 
-const StyledSurveychimpUi = styled.div`
+const StyledSurveyBearUi = styled.div`
   color: pink;
 `;
 
-export function SurveychimpUi(props: SurveychimpUiProps) {
+export function SurveyBearUi(props: SurveyBearUiProps) {
   return (
-    <StyledSurveychimpUi>
-      <h1>Welcome to SurveychimpUi!</h1>
-    </StyledSurveychimpUi>
+    <StyledSurveyBearUi>
+      <h1>Welcome to SurveyBearUi!</h1>
+    </StyledSurveyBearUi>
   );
 }
 
-export default SurveychimpUi;
+export default SurveyBearUi;

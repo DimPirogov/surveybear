@@ -1,0 +1,21 @@
+name: SurveyBear CI/CD
+
+on: 
+  push:
+    branches:
+      - test-branch
+      
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Test Job
+    
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 15.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 15.x
+      - run: npm install
+      - run: npx nx test surveybear-api
+      - run: npx nx test surveybear-survey-spa

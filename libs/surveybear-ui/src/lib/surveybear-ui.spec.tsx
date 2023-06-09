@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import surveybearUi from './surveybear-ui';
+import SurveyBearUi from './surveybear-ui';
 
-describe('surveybearUi', () => {
+describe('SurveyBearUi', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<surveybearUi />);
+    const { baseElement } = render(<SurveyBearUi />);
     expect(baseElement).toBeTruthy();
   });
 });
