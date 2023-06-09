@@ -6,6 +6,6 @@ const requestWithSupertest = supertest(app);
 describe('Generic endpoints', () => {
   test('GET /api/todos', async () => {
     const res = await requestWithSupertest.get('/api/todos');
-    expect(res.status).toEqual(400);
+    expect(res.status).toEqual(200);
   });
 });
