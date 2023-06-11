@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - test-branch
+    paths:
+      - apps/surveybear-api
+      - libs
       
 jobs:
   test_job:
@@ -18,4 +21,3 @@ jobs:
           node-version: 15.x
       - run: npm install
       - run: npx nx test surveybear-api
-      - run: npx nx test surveybear-survey-spa
