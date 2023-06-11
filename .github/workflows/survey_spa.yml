@@ -6,6 +6,7 @@ on:
       - test-branch
     paths:
       - apps/surveybear-survey-spa
+      - libs
       
 jobs:
   test_job:
