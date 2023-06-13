@@ -58,7 +58,7 @@ router.patch('/survey/:surveyId',
             const survey = await addResponseToSurvey(req.params.surveyId, req.body);
             res.json(survey);
         } catch (err) {
-            console.log(err);
+            //console.log(err);
             next(err);
         }
     });
