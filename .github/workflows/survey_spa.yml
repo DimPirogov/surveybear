@@ -1,11 +1,11 @@
-name: SurveyBear CI/CD
+name: SurveyBear-survey-spa CI/CD
 
 on: 
   push:
     branches:
       - test-branch
     paths:
-      - apps/surveybear-api
+      - apps/surveybear-survey-spa
       - libs
       
 jobs:
@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: 15.x
       - run: npm install
-      - run: npx nx test surveybear-api
+      - run: npx nx test surveybear-survey-spa
