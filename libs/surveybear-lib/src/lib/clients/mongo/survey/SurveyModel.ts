@@ -6,6 +6,7 @@ export interface ISurveyResponse {
 }
 
 export interface ISurvey {
+    _id?: string
     recipient: ISurveyRecipient,
     response?: ISurveyResponse
 }
