@@ -5,8 +5,8 @@ on:
     branches:
       - testBranch
     paths:
-      - apps/surveybear-api
-      - libs
+      - apps/surveybear-api/**
+      - libs/**
 
 jobs:
   test_job:
