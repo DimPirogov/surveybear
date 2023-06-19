@@ -15,6 +15,7 @@ const StartPage = () => {
 
     return (<>
         <h1>Survey</h1>
+        <h2>För fan</h2>
         {surveys.map(survey => (
             <p><Link to={`/survey/${survey._id?.toString()}`}>{ survey?.recipient.name}</Link></p>
     ))
