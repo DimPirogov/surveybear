@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { addSurvey, addResponseToSurvey, getSurveyById } from '@surveybear/surveybear-lib';
+import { addSurvey, addResponseToSurvey, getSurveyById, getSurveys } from '@surveybear/surveybear-lib';
 import { body, param, validationResult } from 'express-validator';
 
 const router = Router();
@@ -66,6 +66,29 @@ router.patch('/survey/:surveyId',
 
 router.get('/api/todos', (req, res) => res.status(200).send());
 router.get('/healthcheck', (req, res) => res.status(200).send());
-router
+
+// router.get('/surveys', async (req, res, next) => {
+//   try {
+//       //validation
+//       const errors = validationResult(req);
+//       if (!errors.isEmpty()) {
+//           return res.status(400).json({ errors: errors.array() });
+//       }
+//       //do stuff if valid input data
+//       const survey = await getSurveys();
+//       res.json(survey);
+//   } catch (err) {
+//       next(err);
+//   }
+
+// })
+
+router.get('/surveys', async (req, res, next) => {
+  try {
+    const surveys = await getSurveys();
+    res.json(surveys);}
+    catch (err) {
+      next(err);   }
+});
 
 export default router;
