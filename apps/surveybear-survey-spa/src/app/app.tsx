@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import SurveyPage from './pages/SurveyPage';
 import StartPage from './pages/StartPage';
+import ThankPage from './pages/ThankPage';
 
 
 import { Route, Routes } from 'react-router-dom';
@@ -25,8 +26,11 @@ export function App() {
         <Route
           path="/"
           element={<StartPage/>} />
+        <Route
+          path="/thanks"
+          element={<ThankPage/>} />
       </Routes>
-    </StyledApp>
+   </StyledApp>
   );
 
 }
