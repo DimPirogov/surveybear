@@ -67,12 +67,12 @@ router.patch('/survey/:surveyId',
 router.get('/api/todos', (req, res) => res.status(200).send());
 router.get('/healthcheck', (req, res) => res.status(200).send());
 
-// router.get('/surveys', async (req, res, next) => {
-//   try {
-//     const surveys = await getSurveys();
-//     res.json(surveys);}
-//     catch (err) {
-//       next(err);   }
-// });
+router.get('/surveys', async (req, res, next) => {
+  try {
+    const surveys = await getSurveys();
+    res.json(surveys);}
+    catch (err) {
+      next(err);   }
+});
 
 export default router;
