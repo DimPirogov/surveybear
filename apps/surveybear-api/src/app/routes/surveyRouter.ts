@@ -69,26 +69,10 @@ router.get('/healthcheck', (req, res) => res.status(200).send());
 
 // router.get('/surveys', async (req, res, next) => {
 //   try {
-//       //validation
-//       const errors = validationResult(req);
-//       if (!errors.isEmpty()) {
-//           return res.status(400).json({ errors: errors.array() });
-//       }
-//       //do stuff if valid input data
-//       const survey = await getSurveys();
-//       res.json(survey);
-//   } catch (err) {
-//       next(err);
-//   }
-
-// })
-
-router.get('/surveys', async (req, res, next) => {
-  try {
-    const surveys = await getSurveys();
-    res.json(surveys);}
-    catch (err) {
-      next(err);   }
-});
+//     const surveys = await getSurveys();
+//     res.json(surveys);}
+//     catch (err) {
+//       next(err);   }
+// });
 
 export default router;
