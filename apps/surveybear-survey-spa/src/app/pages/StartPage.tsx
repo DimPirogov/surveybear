@@ -17,6 +17,7 @@ const StartPage = () => {
         <h1>Survey</h1>
         <h2>För fan</h2>
         <h3>Otroligt</h3>
+        <p>Du är på förstasidan</p>
         {surveys.map(survey => (
             <p><Link to={`/survey/${survey._id?.toString()}`}>{ survey?.recipient.name}</Link></p>
     ))
